@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .navbar {
+            overflow: hidden;
+            position: fixed;
+            /* Set the navbar to fixed position */
+            top: 0;
+            /* Position the navbar at the top of the page */
+            width: 100%;
+            /* Full width */
+            z-index: 999;
+            font-size: 20px;
+            font-family: times new roman;
+        }
+        /* Links inside the navbar */
+        
+        .navbar a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: none;
+        }
+        /* Change background on mouse-over */
+        
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0;
+        }
+        
+        .mySlides {
+            display: none
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: red;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Caption text */
+        
+        .text {
+            color: #cc0000;
+            font-size: 20px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            border-style: solid;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: red;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            font-weight: bold;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+        /* On smaller screens, decrease text size */
+        
+        @media only screen and (max-width: 300px) {
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+        
+        .bg {
+            background-size: 50%;
+        }
+        
+        .img {
+            float: center;
+            width: 540px;
+            height: 450px;
+        }
+        
+        .bg-top {
+            background-color: red;
+        }
+        
+        table {
+            border-collapse: collapse;
+        }
+        
+        table,
+        th,
+        td {
+            border: 5px solid pink;
+        }
+    
+        .container {
+            position: relative;
+            color: white;
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-style: solid;
+            padding: 15px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYW4p_-sbWdqEgkBu0bCzqF8iKL273I-kwsg&usqp=CAU')">
+    <div style="background-image: url('https://i.pinimg.com/236x/2f/83/c5/2f83c5f98dc41cb670b55da925413ca3--off-black-farrow-ball.jpg')" class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Components.html">Components</a>
+        <a href="About.html">About</a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="color:white" align="center">To view where I bought my components just click on the following images.</div>
+    <br>
+    <div style="color:white" align="center"> To view other images click the next or previous buttons on the image.</div>
+    <br>
+    <div style="color:white" align="center"> Scroll down to learn more about the components.</div>
+    <br>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 14</div>
+            <a target="_blank" href="https://www.bestbuy.ca/en-ca/product/intel-core-i9-9900k-coffee-lake-8-core-16-thread-3-6-ghz-5-0-ghz-turbo-lga-1151-300-series-95w-bx80684i99900k-desktop-pr/13231435">
+                <img class="img" src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6302/6302019_sd.jpg" style="width:100%">
+                <div class="text">Intel Core i9-9900K </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 14</div>
+            <a target="_blank" href="https://www.amazon.ca/GIGABYTE-Z390-AORUS-LGA1151-Motherboard/dp/B07HS4PQWK">
+                <img class="img" src="https://c1.neweggimages.com/NeweggImage/ProductImage/13-145-090-V01.jpg" style="width:100%">
+                <div class="text">Intel Z390 AORUS Motherboard </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 14</div>
+            <a target="_blank" href="https://www.canadacomputers.com/product_info.php?cPath=6_112&item_id=121606">
+                <img class="img" src="https://cwsmgmt.corsair.com/pdp/500d-rgb-se/images/500d_se_built_40.png" style="width:100%">
+                <div class="text">Obsidian Series 500D RGB SE Premium Mid-Tower Case</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 14</div>
+            <a target="_blank" href="https://www.amazon.ca/Corsair-CP-9020195-NA-RM750-Modular-Supply/dp/B07RF237B1">
+                <img class="img" src="https://images-na.ssl-images-amazon.com/images/I/417iRGoQV5L._AC_.jpg" style="width:100%">
+                <div class="text">Corsair CP-9020195-NA RM Series RM750 80 Plus Gold Fully Modular ATX Power Supply
+                </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 14</div>
+            <a target="_blank" href="https://www.amazon.ca/PG279Q-2560x1440-G-SYNC-Gaming-Monitor/dp/B017EVR2VM">
+                <img class="img" src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/104/10404/10404138.jpg" style="width:100%">
+                <div class="text">ASUS ROG SWIFT PG279Q 27" 2560x1440 IPS 165Hz 4ms G-SYNC Eye Care Gaming Monitor
+                </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">6 / 14</div>
+            <a target="_blank" href="https://www.newegg.ca/evga-geforce-rtx-2080-ti-11g-p4-2382-kr/p/N82E16814487402">
+                <img class="img" src="https://c1.neweggimages.com/ProductImage/14-487-402-V11.jpg" style="width:100%">
+                <div class="text">GeForce RTX 2080 Ti XC GAMING</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">7 / 14</div>
+            <a target="_blank" href="https://www.newegg.ca/oloy-32gb-288-pin-ddr4-sdram/p/N82E16820821196">
+                <img class="img" src="https://c1.neweggimages.com/ProductImage/20-821-196-V03.jpg" style="width:100%">
+                <div class="text">OLOy 32GB (2 x 16GB) 288-Pin DDR4 SDRAM </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">8 / 14</div>
+            <a target="_blank" href="https://www.bhphotovideo.com/c/product/1500556-REG/creative_labs_70sb178000000_sound_blaster_ae_9.html">
+                <img class="img" src="https://assets1.ignimgs.com/2019/07/18/soundblaster-ae-9-blogroll-1563467932554.jpg" style="width:100%">
+                <div class="text">Creative Labs Sound Blaster AE-9 </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">9 / 14</div>
+            <a target="_blank" href="https://www.logitech.com/en-ca/product/speaker-system-z906">
+                <img class="img" src="https://assets.logitech.com/assets/54713/z906-gallery.png" style="width:100%">
+                <div class="text">Z906 5.1 SURROUND SOUND SPEAKER SYSTEM</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">10 / 14</div>
+            <a target="_blank" href="https://www.newegg.ca/seagate-barracuda-st2000dm008-2tb/p/N82E16822184773">
+                <img class="img" src="https://c1.neweggimages.com/NeweggImage/ProductImage/22-184-773-V01.jpg?ex=2" style="width:100%">
+                <div class="text">Seagate BarraCuda ST2000DM008 2TB 7200 RPM 256MB Cache SATA 6.0Gb/s 3.5" Hard Drive Bare Drive
+                </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">11 / 14</div>
+            <a target="_blank" href="https://www.bestbuy.ca/en-ca/product/seagate-seagate-expansion-1tb-2-5-5400rpm-usb-3-0-portable-external-hard-drive-stea1000400-stea1000400/10372820">
+                <img class="img" src="https://multimedia.bbycastatic.ca/multimedia/products/500x500/103/10372/10372820.jpg" style="width:100%">
+                <div class="text">Seagate Expansion 1TB 2.5" 5400RPM USB 3.0 Portable External Hard Drive
+                </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">12 / 14</div>
+            <a target="_blank" href="https://www.logitechg.com/en-ca/products/gaming-keyboards/g513-backlit-mechanical-gaming-keyboard.html">
+                <img class="img" src="https://i.ebayimg.com/images/g/SM8AAOSwcUdcvb3x/s-l300.jpg" style="width:100%">
+                <div class="text">G513 LIGHTSYNC RGB MECHANICAL GAMING KEYBOARD
+                </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">13 / 14</div>
+            <a target="_blank" href="https://www.logitechg.com/en-ca/products/gaming-mice/g502-lightspeed-wireless-gaming-mouse.html#910-005565">
+                <img class="img" src="https://www.titan-ice.co.za/images/detailed/9/g502-lightspeed-gallery-5.png.imgw.1384.1038.jpeg" style="width:100%">
+                <div class="text">G502 LIGHTSPEED WIRELESS GAMING MOUSE
+                </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">14 / 14</div>
+            <a target="_blank" href="https://www.amazon.ca/CORSAIR-Radiator-Advanced-Lighting-Software/dp/B077FZPCRH?th=1">
+                <img class="img" src="https://images-na.ssl-images-amazon.com/images/I/61DHQLRqMQL._AC_SL1200_.jpg" style="width:100%">
+                <div class="text">CORSAIR HYDRO SERIES H150i PRO RGB AIO Liquid CPU Cooler
+                </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+        <span class="dot" onclick="currentSlide(11)"></span>
+        <span class="dot" onclick="currentSlide(12)"></span>
+        <span class="dot" onclick="currentSlide(13)"></span>
+        <span class="dot" onclick="currentSlide(14)"></span>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <table style="color:white" width="1000" align="center" border=4>
+        <tr>
+            <td class="bg-top">
+                <B>Component</B>
+            </td>
+            <td class="bg-top">
+                <B>Cost</B>
+            </td>
+            <td class="bg-top">
+                <B>Details</B>
+            </td>
+            <td class="bg-top">
+                <B>Term/Concept</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>CPU</u></div>
+          </B>
+            </td>
+            <td>
+                <B>$698</B>
+            </td>
+            <td>
+                <B>Cores: 8
+            <div>Graphics Core Speed: 350Mz</div>
+            <div>Clock speed: 3.6 GHz</div>
+            <div>Max Resolution: 60Hz</div>
+            <div>Processor Interface: FCLGA1151</div>
+            <div>Power Consumption: 95W</div>
+            <br>
+            <div> When choosing the Intel Core i9-9900K, know that it is one of the newest models in CPUs meaning it will execute functions faster. If a computer were faster then productivity and efficiency increase. At this price point no other CPU comes close to the speed of the Intel Core i9-9900K.</div>
+            <br>
+            <div> Its primary function is to send signals to control the other parts of the computer, almost like how a brain controls a body.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>Intel Optane</u> - is a technology system designed to greatly improve storage speeds by caching your computer's most frequently used processes for the hard drive. The technology uses 3D XPoint, a new type of memory that its creators, Micron and Intel, claim is 1,000 times faster than traditional NAND flash.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Motherboard</u></div>
+            <br>
+
+          </B>
+            </td>
+            <td>
+                <B>$379</B>
+            </td>
+            <td>
+                <B>
+            <div>Support for 9th and 8th Generation Intel® Core™ i9 processors</div>
+            <div>2 x M.2 connector and 6 x SATA 6Gb/s connectors</div>
+            <div>Intel® Z390 Express Chipset</div>
+            <div>1 x PCI Express x16 slot, running at x16 (PCIEX16)</div>
+            <div>Screw Mounted MOS Heatsinks</div>
+            <div>4 x 3.0 USB ports</div>
+            <br>
+            <div> Compatible with any Intel 8th and 9th Gen Core Processors. Contains a dual DDR4 port which supports the OLOy memory cards. Also has a Solid Pin Power Connector (24 pin ATX Power Connector) which is perfect to connect to the power supply. This motherboard uses an 12+1 phases digital CPU power design which includes both digital PWM Controller and DrMOS allowing you to get the maximum performance from the processor. </div>
+            <br>
+            <div> A motherboard is one of the most essential parts of a computer system. It holds together many of the crucial components of a computer, including the central processing unit (CPU), memory and connectors for input and output devices.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>cFosSpeed Internet Accelerator Networking</u> - is a network driver, which attaches itself to existing Internet connections. It then optimizes data transfer by means of Traffic Shaping. Traffic Shaping is a method for optimizing the Internet traffic. It allows maximum speed while ensuring minimal ping.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Case</u></div>
+            <br>
+
+          </B>
+            </td>
+            <td>
+                <B>$320</B>
+            </td>
+            <td>
+                <B>
+            <div>Supports ATX motherboards</div>
+            <div>Made of Tempered glass and steel</div>
+            <div>2 front USB 2.0 Type A ports</div>
+            <div>Case Expansion Slots: 7</div>
+            <br>
+            <div> Comes with 4 RGB liquid cooling fans to keep all internal components from overheating. Translucent tempered glass making the PC look stylish while strong. If glass were used for the casing then the case could easily be shattered. The case can hold all components of the PC from the motherboard to sound cards. The case also has several USB 2.0 Type A ports and audio/speaker jacks. Moreover, the case has removable fan and radiator trays making installation easy. It is also compatabile with ATX connectors making the motherboard also compatible with the case.</div>
+            <br>
+            <div> The computer case serves mainly as a way to physically mount and contain all of the actual components inside of a computer, like the motherboard, hard drive, optical drive, floppy disk drive, etc.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>iCUE Software</u> - is the newest software that connects all your CORSAIR iCUE compatible products together in a single interface, giving you complete control of everything from RGB lighting and powerful macros to system monitoring and cooling control.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Power Supply</u></div>
+            <br>
+
+          </B>
+            </td>
+            <td>
+                <B>$163</B>
+            </td>
+            <td>
+                <B>
+
+            <div>Has a 24 pin ATX connector port</div>
+            <div>750W needed to power the power supply</div>
+            <br>
+            <div>Is an ATX power supply meaning it is compatible for the motherboard. It also fit nicely into the computer case.</div>
+            <br>
+            <div> A power supply unit (or PSU) converts mains AC to low-voltage regulated DC power for the internal components of a computer.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>Modern Standby</u> - is a feature for Windows 10 that vastly improves your PC's sleep and wake functionality. The technology allows your system to wake from sleep more than twice as fast, as well as maintain a network connection during sleep to continue downloading updates and receive emails and notifications – just like your phone. Best of all, it does this with less overall power consumption.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Monitor</u></div>
+            <br>
+            <div></div>
+          </B>
+            </td>
+            <td>
+                <B>$880</B>
+            </td>
+            <td>
+                <B>
+
+            <div>27" QuadHD (1440p) </div>
+            <div>165Hz refresh rate</div>
+            <div>Voltage: 100-240V, 50/60Hz</div>
+            <div>2 USB 2.0 Type A ports</div>
+            <div>Max Screen Resolution: 2560 x 1440 pixels</div>
+            <div>ASUS Eye care technology</div>
+
+            <br>
+            <div> The key feature that made me choose this monitor was because of the ASUS eye care technology. While gaming for long periods of time our eyes start to hurt and force us off the computer. However, with the eye care technology, gamers will feel less eye fatigue meaning they can play games for a longer period of time. This technology also comes with reduced blue light filters reducign eye strain. The average refresh rate would be 60Hz but with this 27" QuadHD monitor, the refresh rate is a whopping 165Hz.</div>
+            <br>
+            <div> A computer monitor is a display adapter that displays information processed by the computer's video card. Monitors have display functions that include powering it on and off, controlling brightness, contrast and position, among others.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>NVIDIA G-SYNC</u> - is groundbreaking new display technology that delivers the smoothest and fastest gaming experience ever. G-SYNC's revolutionary performance is achieved by synchronizing display refresh rates to the GPU in your GeForce GTX-powered PC, eliminating screen tearing and minimizing display stutter and input lag.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Video Card</u></div>
+            <br>
+            <div></div>
+          </B>
+            </td>
+            <td>
+                <B>$1647</B>
+            </td>
+            <td>
+                <B>
+
+            <div>Interface: PCI Express 3.0 </div>
+            <div>Boost Clock: 1635 MHz</div>
+            <div>Cores: 4352</div>
+            <div>Effective Memory Clock: 14000 MHz</div>
+            <div>Ports: 1 x HDMI 2.0b, 3 x DisplayPort 1.4, 1 x USB TYPE-C</div>
+            <div>Coolers: Double Fans</div>
+            <div>NVIDIA® G-SYNC™ Compatible</div>
+            <div>Power Needed: 650W</div>
+            <div>FPS in different graphic settings: Low: 187 FPS, Medium: 148 FPS, High: 99 FPS and Ultra: 71 FPS.</div>
+
+            <br>
+            <div> I chose this video card because the number of cores and its boost clock speed. The speed and performance delivered by this video card is unmatchable to any other cards. It is highly compatible with the mointor as the graphics card can support NVIDIA G-SYNC. This graphics card can connect to a PCI Express Slot on the motherboard.</div>
+            <br>
+            <div> A video card connects to the motherboard of a computer system and generates output images to display. Video cards are also referred to as graphics cards. Video cards include a processing unit, memory, a cooling mechanism and connections to a display device.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>NVIDIA Turing</u> - GeForce® RTX graphics cards are powered by the Turing GPU architecture and the all-new RTX platform. This gives you up to 6X the performance of previous-generation graphics cards and brings the power of real-time ray tracing and AI to games.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Memory</u></div>
+            <br>
+            <div></div>
+          </B>
+            </td>
+            <td>
+                <B>$171</B>
+            </td>
+            <td>
+                <B>
+
+            <div>Type: 288-Pin DDR4 SDRAM </div>
+            <div>Speed: DDR4 3200</div>
+            <div>Storage: 32GB(2 X 16GB)</div>
+
+            <br>
+            <div> I chose this memory card because this memory card fits perfectly in the DDR4 slot on the motherboard. It also has a 32GB storage space. This may seem like a lot but for a gaming computer it is necessary. With this much space gamers can storge many files on their computer, especially games.</div>
+            <br>
+            <div> A memory card is a type of storage device that is used for storing media and data files. It provides a permanent and non-volatile medium to store data and files from the attached device.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>Semiconductor Equipment</u> - Semiconductor fabrication consists of a series of processes in which a device structure is manufactured by applying a series of layers onto a substrate, most commonly on silicon.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Sound Card</u></div>
+            <br>
+            <div></div>
+          </B>
+            </td>
+            <td>
+                <B>$332</B>
+            </td>
+            <td>
+                <B>
+
+            <div>Supports 5.1- & 7.1-Channel Surround </div>
+            <div>Compatible with 32- and 64-bit versions of Windows 10, 8.1, 8, and 7</div>
+            <div>Uses PCI Express slots</div>
+
+            <br>
+            <div> I chose this sound card because it is compatible with my speakers and the motherboard. The speakers are 5.1 surround so they work with the sound card and the motherboard has PCI Express slots available. It also provides 3D srround system which mimics a home theatre sound system. This sound card takes your gaming experience to the next level with unbelievable sounds.</div>
+            <br>
+            <div> A sound card converts digital data to analog sound waves you can hear. The output signal is then connected to a headphone or set of speakers.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>X-Fi technology</u> -  uses computational audio to recreate the listening experience of a high-end multi-speaker system in a professional studio, and delivers the same expansive natural experience - with the same original depth, detail, realism, and spaciousness - in headphones.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Speakers</u></div>
+            <br>
+            <div></div>
+          </B>
+            </td>
+            <td>
+                <B>$500</B>
+            </td>
+            <td>
+                <B>
+
+            <div>165W Subwoofer + Four satellite speakers + One center channel </div>
+            <div>Comes with a wireless controller</div>
+            <div>Ports: 2 digital optical input, 1 digital coaxial input, 1 six channel direct input, 1 3.5mm input, and 1 RCA input</div>
+
+            <br>
+            <div> I chose these speakers mainly based on the number of speakers which allows surround sound. Surround sound can change your gaming experience. These speakers also deliver rich audio and thunderous bass. At this price point, this deal is a steal. These speakers are also compatible with a PC beacause of the headphone jack.</div>
+            <br>
+            <div> Speakers produce audio output that can be heard by the listener. Speakers are transducers that convert electromagnetic waves into sound waves. The speakers receive audio input from a device such as a computer or an audio receiver.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>Surround Sound</u> -  is a technique for enriching the fidelity and depth of sound reproduction by using multiple audio channels from speakers that surround the listener.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Hard Drive</u></div>
+            <br>
+            <div></div>
+          </B>
+            </td>
+            <td>
+                <B>$65</B>
+            </td>
+            <td>
+                <B>
+
+            <div> SATA 6Gb/s interface optimizes burst performance, 256MB Cache and 7200 RPM </div>
+            <div>Capacity: 2TB</div>
+
+            <br>
+            <div> I chose this hard drive because it is very compatible with the motherboard as it supports SATA interfaces. Hard drives can easily be filled up so I chose a 2TB hard drive. With this much space you could store large amounts of data. I could have gone higher but for its price point it is a good deal. 7200RPM is quite fast for a hard drive meaning it can perform tasks extremely fast improving the performance of a computer. </div>
+            <br>
+            <div> All computers require space for software programs, operating system, and other important files. A hard disk, also known to be the hard drive is the most important data storage hardware device in all computers. This non-volatile memory device stores and retrieves data on a computer permanently.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>Advanced Power Mode</u> -  is a setting that allows the computer to conserve energy when the computer's battery is critical but doesn't sacrifice the performance of the computer.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Portable Storage</u></div>
+            <br>
+            <div></div>
+          </B>
+            </td>
+            <td>
+                <B>$75</B>
+            </td>
+            <td>
+                <B>
+
+            <div> USB 3.0 interface for fast data transfer speeds </div>
+            <div>1TB of space </div>
+            <div>Compatible with Windows 10 (32 bit and 64 bit) </div>
+            <div>Speed: 5400RPM</div>
+            <br>
+            <div> I chose this portable storage because it had  a USB 3.0 port like the PC making it compatible. Since both the PC and the external storage use USB 3.0, the transfer of large files will be done faster. 1TB of external storage is more than enough to store your files but at its price its worth it.</div>
+            <br>
+            <div> An external hard drive is a storage device located outside of a computer that is connected through a USB cable or wireless connection. An external hard drive is usually used to store media that a user needs to be portable, for backups, and when the internal drive of the computer is already at its full memory capacity.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>Size of the Unit</u> -  when portable storage first started to become popular, the size of the hard drive was extremely large. Trying to get a few gigabytes of storage would have costed more than the computer itself. However, since we made many advancements to portable storage, today we can get 5GB of sorage for less than $5.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Keyboard</u></div>
+            <br>
+            <div></div>
+          </B>
+            </td>
+            <td>
+                <B>$200</B>
+            </td>
+            <td>
+                <B>
+
+            <div> Aircraft-Grade Aluminum Alloy for frame of the keyboard </div>
+            <div>USB Passthrough</div>
+            <div>RGB lighting</div>
+            <br>
+            <div> I chose this keyboard mainly based on the detachable palmrest and is mechanical. For gaming, mechanical keyboards are a must. The palmrest is a unique design that lets you rest yor hands on it making your gaming experience comfortable. Without the palmrest gamers cannot go for many hours at a time because thier hands start to get sore. This design provides premium comfort to the user. The Aircraft-Grade Aluminum Alloy is very durable making the keyboard last longer.</div>
+            <br>
+            <div> A computer keyboard is an input device used to enter characters and functions into the computer system by pressing buttons, or keys. It is the primary device used to enter text. A keyboard typically contains keys for individual letters, numbers and special characters, as well as keys for specific functions.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>LIGHTSYNC RGB</u> -  Logitech has introduced its new Lightsync technology designed to add immersion to games as well as to visualize music or movie audio using RGB LEDs inside peripherals.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>Mouse</u></div>
+            <br>
+            <div></div>
+          </B>
+            </td>
+            <td>
+                <B>$200</B>
+            </td>
+            <td>
+                <B>
+
+            <div> Wireless Mouse </div>
+            <div>LIGHTSYNC RGB Lighting</div>
+            <div>Hyper-fast scroll wheel </div>
+            <div>1ms report rate </div>
+            <div>Resolution: 100 – 16,000 DPI</div>
+            <div>Uses USB 3.0 port</div>
+            <br>
+            <div> I chose this keyboard mainly based on the detachable palmrest and is mechanical. For gaming, mechanical keyboards are a must. The palmrest is a unique design that lets you rest yor hands on it providing premium comfort. Without the palmrest gamers cannot go for many hours at a time because thier hands start to get sore. The Aircraft-Grade Aluminum Alloy is very durable making the keyboard last longer. The dongle requires a USB 3.0 port and is available on the PC to connect the mouse to the computer wirelessly. Overall the mouse is compatible with the PC.</div>
+            <br>
+            <div> A computer mouse enables its user to move a cursor smoothly and intuitively across a two-dimensional plane. It's therefore an essential input device for selecting, dragging, hovering, and clicking.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>HERO 16K Sensor</u> - Next-gen HERO 16K gaming sensor is capable of 400+ IPS tracking speed across the entire 16,000 DPI range and up to 10x the power efficiency compared to previous generations.</B>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <B>
+            <div><u>CPU Cooler</u></div>
+            <br>
+            <div></div>
+          </B>
+            </td>
+            <td>
+                <B>$187</B>
+            </td>
+            <td>
+                <B>
+
+            <div> Dynamic Multicolor RGB Lighting </div>
+            <div>Zero RPM cooling profile</div>
+            <div>Fan Static Pressure: 1.78 mm-H2O </div>
+            <div>Advanced pump speed control options </div>
+            <br>
+            <div> I mainly chose this CPU cooler because it eliminates fan noise and is compatible with the case. This CPU cooler uses something called Precise Pump Control which maximizes performance and minimizes fan noise. Also this fan fits perfectly in the measurements of the case. This CPU cooler also uses magnetic levitation improving airflow to the CPU. Overall, at this price point, no other CPU cooler will deliver the cooling the Corsair Liquid Cooling CPU cooler does.</div>
+            <br>
+            <div> A CPU cooler is device designed to draw heat away from the system CPU and other components in the enclosure. Using a CPU cooler to lower CPU temperatures improves efficiency and stability of the system.</div>
+          </B>
+            </td>
+            <td style="width: 40%">
+                <B><u>Corsair Link Software</u> - is a unified software that allows for the monitoring and control of multiple Corsair products. The software is capable of identifying and monitoring system sensors, such as the CPU temperature or fan speeds, and can use that information for the programming of user-specific performance profiles.</B>
+            </td>
+        </tr>
+        </table>
+        <br><br><br><br><br>
+        <div class="container">
+          <div class="centered">
+          <marquee width="70%"scrollamount="9">
+            <h2 style="text-align: center">Grand Total: $5630</h2></marquee>
+          </div>
+        </div>
+        
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+</body>
+
+</html>

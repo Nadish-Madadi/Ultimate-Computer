@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html {
+            box-sizing: border-box;
+            align: center;
+        }
+        
+        .navbar {
+            overflow: hidden;
+            background-size: cover;
+            position: fixed;
+            /* Set the navbar to fixed position */
+            top: 0;
+            /* Position the navbar at the top of the page */
+            width: 100%;
+            /* Full width */
+            z-index: 999;
+            font-size: 20px;
+        }
+        /* Links inside the navbar */
+        
+        .navbar a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: none;
+        }
+        /* Change background on mouse-over */
+        
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
+        
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        
+        .column {
+            float: center;
+            width: 27.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+        
+        @media screen and (max-width: 300px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: black;
+            background-color: white;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 15px;
+        }
+        
+        .button:hover {
+            background-color: #555;
+        }
+        
+        .bg {
+            background-size: cover;
+        }
+    </style>
+
+    <body class="bg" style="background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm33-chim-07-c-abstract_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=eae33e00a6254c156c2d3a4204b726cb')">
+        <div style="background-image: url('https://i.pinimg.com/236x/2f/83/c5/2f83c5f98dc41cb670b55da925413ca3--off-black-farrow-ball.jpg')" class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Components.html">Components</a>
+            <a href="About.html">About</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div align="center" class="row">
+            <div align="center" class="column">
+                <div align="center" class="card">
+                    <img src="My pic.jpg" alt="Nadish" style="width:100%">
+                    <div align="center">
+                        <h2 style="color:white">Nadish Madadi</h2>
+                        <p style="color:white" class="title">High School Student</p>
+                        <p style="color:white">Attending Port Credit Secondary School</p>
+                        <p style="color:white">nadishmadadi@gmail.com</p>
+                        <p>
+                            <a href="mailto:nadishmadadi@gmail.com">
+                                <button class="button">Contact</button>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+    </body>
+
+</html>
